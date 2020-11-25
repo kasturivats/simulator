@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ /*The device with borders */
+.smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 16px black solid;
+  border-top-width: 60px;
+  border-bottom-width: 60px;
+  border-radius: 36px;
+
+}
+
+/* The circle on the bottom of the device */
+.smartphone:after {
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #333;
+  border-radius: 50%;
+}
+
+/* The screen (or content) of the device */
+.smartphone .content {
+  width: 360px;
+  height: 640px;
+  background: #287282;
+}
+.button {
+	height: 70px;
+	    margin-top: 10%;
+	    margin-left: 100px;
+	    font-size: medium;
+	    font-style: italic;
+	    background-color: #3bdbb9;
+	    width: 150px;
+	}
+.button2{
+	height: 30px;
+	    margin-top: 50px;
+	    width: 70px;
+	    text-align: center;
+	    background-color: #85d816;
+	    margin-left: 38%;
+	}
+.txt{
+		height: 30px;
+		    margin-top: 30px;
+		    width: 200px;
+		    text-align: center;
+		    background-color: #d0e8f9;
+		    margin-left: 20%;
+		}
+#label1{
+	height: 30px;
+	    margin-top: 30px;
+	    width: 200px;
+	    text-align: center;
+		background-color: #de3b21;
+		color: white;
+	    margin-left: 20%;
+			
+		}
+#img{
+			width: 280px;
+			    height: 150px;
+			    margin-left: 40px;
+			
+		}
+#img2{
+	height: 50px;
+	    margin-top: 10px;
+	    margin-right: 40pc;
+	    margin-left: 150px;
+			
+		}
+	}
+   
+
+</style>
+</head>
+<body>
+
+<div class="smartphone" >
+  <div class="content" id="screen1">
+	  <img src="https://www.graphicsfactory.com/clip-art/image_files/image/3/1300393-occupations-069-12202006.gif" id="img">
+	  <input type="text" class="txt" id="text_input1" placeholder="Enter your favourite color">
+	   <label id="label1">Now Click the "Tap Me" button</label>
+	  <img src="http://clipart-library.com/images/pTq8yjApc.png" id="img2">
+	 
+	  <button type="button" class="button2" onclick="myFunction2()">Tap Me</button>
+	 <button type="button" class="button" onclick="myFunction()">Click Me To Change The Color Randomly</button>
+	 
+
+	  <script>
+		   // window.setInterval(f, 10000);{
+	  function myFunction() {
+	   // document.getElementById("screen1").className = "mystyle";
+	    document.getElementById("screen1").style.background = getRandomColor();
+	}
+		function getRandomColor() {
+		    var letters = "0123456789ABCDEF".split('');
+		    var color = "#";
+		    for (var i = 0; i < 6; i++ ) {
+		        color += letters[Math.floor(Math.random() * 16)];
+		    }
+		    return color; 
+		}
+	
+	  function myFunction2() {
+	 	 var a = document.getElementById("text_input1").value;
+		  
+		  document.getElementById("screen1").style.background = a;
+		  	  }
+		 			
+		  
+	  
+	  
+</script>
+  </div>
+</div>
+
+</body>
+</html>
